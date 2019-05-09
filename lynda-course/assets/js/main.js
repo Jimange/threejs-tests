@@ -21,7 +21,11 @@ function init()
 						1000 											//far clipping plane
 					);
 	cam.position.z = 5;
-	
+	cam.position.x = 1;
+	cam.position.y = 2;
+
+	cam.lookAt(new THREE.Vector3(0,0,0));								//points cam at target coordinates (box)
+
 	var renderer =	new THREE.WebGLRenderer(); 							//other renderers available
 
 	renderer.setSize(window.innerWidth,window.innerHeight);
