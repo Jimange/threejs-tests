@@ -56,6 +56,15 @@ function getPlane(size) {
 function update(renderer, scene, camera) {
 	renderer.render(scene,camera);
 
+	var plane = scene.getObjectByName('plane-01');
+	plane.rotation.x += 0.001;
+	plane.rotation.z += 0.001;
+
+	scene.traverse(function(child)
+	{
+		child.scale.x += .001;
+	});
+
 	requestAnimationFrame(function() {
 		update(renderer, scene, camera);
 	})
