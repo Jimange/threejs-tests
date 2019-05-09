@@ -4,7 +4,7 @@ function init()
 	var box =		getBox(1,1,1);
 	var plane =		getPlane(4);
 	box.position.y = box.geometry.parameters.height / 2;				//gets box height and / 2
-	plane.rotation.x = Math.PI / 2;										//uses different unit to deg
+	plane.rotation.x = Math.PI / 2;										//uses different unit to deg (radians)
 
 	scene.add(box);
 	scene.add(plane);
